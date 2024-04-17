@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="<script src="<script src="https://kit.fontawesome.com/30f27901c2.js" crossorigin="anonymous"></script>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/1200px-Airbnb_Logo_B%C3%A9lo.svg.png">
+    <title>Airbnb</title>
+    
+    <style>
+        *{
+        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+        #main{
+            width: 90%;
+            height: 3000px;
+            /* border: 2px solid black; */
+            margin: auto;
+        }
+        #navbar{
+            /* border: 2px solid black;  */
+            width: 90%;
+            height: 80px;
+            top: 0;
+            left: 0;
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+        }
+        #logo {
+        width: 15%;
+        /* border: 2px solid black; */
+        display: flex;
+        align-items: center;
+      }
+      #logo > img {
+        height: 45%;
+        width: 50%;
+      }
+      #navigation{
+        width: 30%;
+        /* border: 2px solid black; */
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color:#606060 ;
+      }
+      #profile{
+        width: 22%;
+        /* border: 2px solid black; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      #airbnb{
+        font-size: medium;
+        font-weight: 500;
+        color: black;
+        /* border: 2px solid black; */
+      }
+      #icon1{
+        /* border: 2px solid black; */
+      }
+      #profile1{
+        border: 2px solid black;
+        width: 30%;
+        height: 50px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 40px;
+        border-width: 1px;
+
+      }
+        #searchbar{
+            /* border: 2px solid black; */
+            height: 80px;
+            
+            top: 80px;
+            left: 0;
+            
+            
+        }
+        #search{
+          border: 1px solid black;
+          width: 60%;
+          height: 70px;
+          margin: auto;
+          margin-top: 0.5%;
+          border-radius: 100px;
+          outline: 1px;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          
+          top: 80;
+          left: 0;
+          border-style: outset;
+            
+        }
+        #search p{
+          opacity: 0.7;
+        }
+        #searchicon{
+          /* border: 2px solid black; */
+          display: flex;
+          justify-content: space-around;
+          
+
+
+        }
+        #searchicon p{
+          display: flex;
+          align-items: center;
+        }
+        #iconbar{
+            /* border: 2px solid black; */
+            border-top: 0.5px solid grey;
+            height: 100px;
+            width: 96%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            
+            top: 140px;
+            left: 0%;
+            margin: auto;
+            /* color: #606060; */
+        }
+        #iconbar img{
+          width: 50%;
+          height: 30px;
+          margin-bottom: 2%;
+          
+        }
+        #iconbar h5{
+          color: #606060;
+          text-align: center;
+          font-size: small;
+          margin-top: 10%;
+        }
+        #filters{
+          width: 8%;
+          height: 50px;
+          border: 1px solid black;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          border-radius: 10px;
+          outline-width: 1px;
+          font-size: small;
+          font-weight: 600;
+        }
+        #filters img{
+          width: 30%;
+        }
+        #toggle{
+          width: 15%;
+          border: 1px solid black;
+          height: 45px;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          border-radius: 10px;
+          outline-width: 1px;
+        }
+        /* #menubar{
+          width: 100%;
+          height: 930px;
+        } */
+        /* .parentdiv {
+        width: 100%;
+        display: flex;
+        font-size: 60px;
+        text-align: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      } */
+      /* .childdiv {
+        height: 400px;
+        width: 24%;
+        margin-bottom: 30px;
+        border-radius: 5%;
+        text-align: left; 
+             
+      } */
+      /* .childdiv img{
+        border-radius: 5%;      
+
+      }
+      .childdiv h5{
+        font-size: medium;
+      }
+      .childdiv p,span{
+        font-size: 15px;
+        opacity: 0.7;
+      } */
+
+      #screen {
+        width: 90%;
+        /* margin: auto; */
+        /* border: 2px solid black; */
+      }
+      #body {
+        width: 110%;
+        /* border: 2px solid red; */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .productCard {
+        /* border: 2px solid blue; */
+        height: 400px;
+        width: 23.7%;
+        margin-bottom: 25px;
+      }
+      .cardBackGroundImg {
+        width: 100%;
+        height: 320px;
+        border-radius: 20px;
+        background-size: cover;
+        background-image: url("https://a0.muscache.com/im/pictures/miso/Hosting-49464278/original/3494e74d-0ca6-476f-a626-0ef6aef39f23.jpeg?im_w=720");
+        margin-bottom: 12px;
+      }
+      .cardBackGroundImg1 {
+        width: 100%;
+        height: 320px;
+        border-radius: 20px;
+        background-size: cover;
+        background-image: url("https://a0.muscache.com/im/pictures/miso/Hosting-738752223904069643/original/be0748b5-e2d7-4b1e-8f43-bfce3f61d615.jpeg?im_w=720");
+        margin-bottom: 12px;
+      }
+      .cardBackGroundImg2 {
+        width: 100%;
+        height: 320px;
+        border-radius: 20px;
+        background-size: cover;
+        background-image: url("https://a0.muscache.com/im/pictures/miso/Hosting-52466292/original/d8a362e6-628e-48f2-a879-8b55ccad649d.jpeg?im_w=720");
+        margin-bottom: 12px;
+      }
+      .cardBackGroundImg3 {
+        width: 100%;
+        height: 320px;
+        border-radius: 25px;
+        background-size: cover;
+        background-image: url("https://a0.muscache.com/im/pictures/3be6d12f-ce3c-4790-bada-f76fc0f53609.jpg?im_w=720");
+        margin-bottom: 12px;
+      }
+      .cardBackGroundImg4 {
+        width: 100%;
+        height: 320px;
+        border-radius: 25px;
+        background-size: cover;
+        background-image: url("https://a0.muscache.com/im/pictures/miso/Hosting-26252349/original/7cf9657f-f6ce-4f0d-a70d-a37e659b62f6.jpeg?im_w=720");
+        margin-bottom: 12px;
+      }
+      .cardBackGroundImg5 {
+        width: 100%;
+        height: 320px;
+        border-radius: 25px;
+        background-size: cover;
+        background-image: url("https://a0.muscache.com/im/pictures/e40b4c9d-1c40-47e8-819f-2780c5968667.jpg?im_w=720");
+        margin-bottom: 12px;
+      }
+      .cardBackGroundImg6 {
+        width: 100%;
+        height: 320px;
+        border-radius: 25px;
+        background-size: cover;
+        background-image: url("https://a0.muscache.com/im/pictures/beb22aa9-5086-4c0c-92c0-fa848f241b96.jpg?im_w=720");
+        margin-bottom: 12px;
+      }
+      .cardBackGroundImg7 {
+        width: 100%;
+        height: 320px;
+        border-radius: 25px;
+        background-size: cover;
+        background-image: url("https://a0.muscache.com/im/pictures/miso/Hosting-893792005435547218/original/8932eee2-ed1e-4ce6-83f2-b4c521b6802b.jpeg?im_w=720");
+        margin-bottom: 12px;
+      }
+      .cardBackGroundImg8 {
+        width: 100%;
+        height: 320px;
+        border-radius: 25px;
+        background-size: cover;
+        background-image: url("https://a0.muscache.com/im/pictures/miso/Hosting-964577283039581384/original/89948277-b0d1-4d0c-a62f-1df8f06db1b5.png?im_w=720");
+        margin-bottom: 12px;
+      }
+      .cardBackGroundImg9 {
+        width: 100%;
+        height: 320px;
+        border-radius: 25px;
+        background-size: cover;
+        background-image: url("https://a0.muscache.com/im/pictures/miso/Hosting-28298543/original/2f63e7c9-1133-49ac-b75d-dff79b61920e.jpeg?im_w=720");
+        margin-bottom: 12px;
+      }
+      .cardBackGroundImg10 {
+        width: 100%;
+        height: 320px;
+        border-radius: 25px;
+        background-size: cover;
+        background-image: url("https://a0.muscache.com/im/pictures/miso/Hosting-692425838804976221/original/8d900092-bb2a-467c-aa55-610f43b63d99.jpeg?im_w=720");
+        margin-bottom: 12px;
+      }
+      .cardBackGroundImg11 {
+        width: 100%;
+        height: 320px;
+        border-radius: 25px;
+        background-size: cover;
+        background-image: url("https://a0.muscache.com/im/pictures/2561046d-3137-4824-9dd7-56e27c7b62fb.jpg?im_w=720");
+        margin-bottom: 12px;
+      }
+      .cardBackGroundImg12 {
+        width: 100%;
+        height: 320px;
+        border-radius: 25px;
+        background-size: cover;
+        background-image: url("https://a0.muscache.com/im/pictures/a237af1a-3010-448e-b57f-058e711b39a0.jpg?im_w=720");
+        margin-bottom: 12px;
+      }
+      .cardBackGroundImg13 {
+        width: 100%;
+        height: 320px;
+        border-radius: 25px;
+        background-size: cover;
+        background-image: url("https://a0.muscache.com/im/pictures/37b61ebe-5dec-4732-b695-767752807e80.jpg?im_w=720");
+        margin-bottom: 12px;
+      }
+      .cardBackGroundImg14 {
+        width: 100%;
+        height: 320px;
+        border-radius: 25px;
+        background-size: cover;
+        background-image: url("https://a0.muscache.com/im/pictures/miso/Hosting-865586313174960641/original/4950f651-ad23-4277-a5d1-a429019b512e.jpeg?im_w=720");
+        margin-bottom: 12px;
+      }
+      .cardBackGroundImg15 {
+        width: 100%;
+        height: 320px;
+        border-radius: 25px;
+        background-size: cover;
+        background-image: url("https://a0.muscache.com/im/pictures/miso/Hosting-831527464018917266/original/29c1da03-9c2f-489d-8436-e3925d6834fc.jpeg?im_w=720");
+        margin-bottom: 12px;
+      }
+      
+      .imgOver {
+        padding-top: 10px;
+        width: 90%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+      }
+      .imgOver > p:nth-child(1) {
+        text-align: center;
+        background-color: white;
+        padding: 5px;
+        width: 46%;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: 500;
+      }
+      .imgOver > i {
+        font-size: 24px;
+        color: white;
+      }
+      .cardText {
+        /* border: 2px solid purple; */
+      }
+      .cardText > p {
+        color: #7b7d81;
+        font-size: 14px;
+        padding: 2px 0px;
+      }
+
+      .cardText > p:nth-child(4) {
+        padding: 6px 0px;
+      }
+      .cardText > p > b {
+        color: black;
+      }
+      .cardTextTitleSection {
+        font-size: 14px;
+        display: flex;
+        font-weight: bold;
+        justify-content: space-between;
+      }
+      .cardTextTitleSection > p:nth-child(2) > i {
+        font-size: 12px;
+      }
+
+      @media screen and (min-width: 900px) and (max-width: 1100px) {
+        .productCard {
+          width: 32%;
+        }
+      }
+      @media screen and (min-width: 550px) and (max-width: 900px) {
+        .productCard {
+          width: 48%;
+        }
+      }
+      @media screen and (max-width: 550px) {
+        .productCard {
+          margin: auto;
+          width: 88%;
+          margin-bottom: 20px;
+        }
+      }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="navbar">
+            <div id="logo">
+                <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/1200px-Airbnb_Logo_B%C3%A9lo.svg.png"
+            alt="Logo"
+          />
+            </div>
+            <div id="navigation">
+                
+                    <p>Stays</p>
+                    <p>Experiences</p>
+                    <p>Online Experiences</p>
+            </div>
+            <div id="profile">
+                <div id="airbnb">
+                    <p>Airbnd your home</p>
+                </div>
+                <div id="icon1">
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <div id="profile1">
+                    <div>
+                    <i class="fa-solid fa-bars"></i>
+                    </div>
+                    <div>
+                    <i class="fa-regular fa-user"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="searchbar">
+          <div id="search">
+            <div>
+              <h5>Where</h5>
+              <p>Search Desitnations</p>
+            </div>
+            <div>
+              <h5>Check In</h5>
+              <p>Add Dates</p>
+            </div>
+            <div>
+              <h5>Check Out</h5>
+              <p>Add Dates</p>
+            </div>
+            <div>
+              <h5><p>Check Out</p></h5>
+              <p>Add Dates</p>
+              
+            </div>  
+              <div style="width: 6%; height:50px; border-radius: 100px; align-items: center; display: flex; background-color: #ff385c;">
+                <i class="fa-solid fa-magnifying-glass" style="margin: auto; color: white;"></i>
+              </div>
+          </div>
+        </div>
+        <div id="iconbar">
+          <div><img src="./cave.jpg" alt="cave">
+            <h5>Caves</h5>
+          </div>
+          <div><img src="./cabins.jpg" alt="cabin">
+            <h5>Cabin</h5>
+          </div>
+          <div><img src="./tinyhouses.jpg" alt="tiny">
+            <h5>Tiny homes</h5>
+          </div>
+          <div><img src="./domes.jpg" alt="dome">
+            <h5>Domes</h5>
+          </div>
+          <div><img src="./golfing.jpg" alt="golfing">
+            <h5>Earth homes</h5>
+          </div>
+          <div><img src="./castles.jpg" alt="castle">
+            <h5>Castles</h5>
+          </div>
+          <div><img src="./island.jpg" alt="island">
+            <h5>OMG!</h5>
+          </div>
+          <div><img src="./treks.jpg" alt="treks">
+            <h5>Lakefront</h5>
+          </div>
+          <div><img src="./beachfront.jpg" alt="beach">
+            <h5>Beachfront</h5>
+          </div>
+          
+          
+          <div style="border: 1px solid black; height: 30px; width: 30px; border-radius: 30px; display: flex; align-items: center;">
+            <i class="fa-solid fa-chevron-right" style="margin: auto;"></i></div>
+            <div id="filters">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5LJ7dnhFeD2AdAjYHnyNzmPCJJ0FUGBLTLGFZ8aD3Qw&s" alt="filter" width="33%">
+                 <b><p>Filters</p></b>
+             </div>
+          <div id="toggle">
+            <div style="font-size: 12px;">Display total before taxes</div>
+            <div style="height: 120%; width: 20%; display: flex; align-items: center;">
+              <!-- <img src="https://alvarotrigo.com/blog/assets/imgs/2022-03-04/toggle-switch-with-css-only.png" alt=""> -->
+            </div>
+          </div>
+        </div>
+        <div id="screen">
+          <div id="body">
+            <div class="productCard">
+              <div class="cardBackGroundImg">
+                <div class="imgOver">
+                  <p>Guest Favourite</p>
+                  <i class="fa-regular fa-heart fa-beat"></i>
+                </div>
+              </div>
+              <div class="cardText">
+                <div class="cardTextTitleSection">
+                  <p>palampur</p>
+                  <p>
+                    <i class="fa-solid fa-star"></i>
+                    <span>5.0</span>
+                  </p>
+                </div>
+                <p>4,343 KM away</p>
+                <p>14-19 Apr</p>
+                <p><b>₹5,000</b> night</p>
+              </div>
+            </div>
+            <div class="productCard">
+              <div class="cardBackGroundImg1">
+                <div class="imgOver">
+                  <p>Guest Favourite</p>
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>
+              <div class="cardText">
+                <div class="cardTextTitleSection">
+                  <p>Delhi</p>
+                  <p>
+                    <i class="fa-solid fa-star"></i>
+                    <span>5.0</span>
+                  </p>
+                </div>
+                <p>7,343 KM away</p>
+                <p>11-14 may</p>
+                <p><b>₹3,450</b> night</p>
+              </div>
+            </div>
+            <div class="productCard">
+              <div class="cardBackGroundImg2">
+                <div class="imgOver">
+                  <p>Guest Favourite</p>
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>
+              <div class="cardText">
+                <div class="cardTextTitleSection">
+                  <p>Karnataka</p>
+                  <p>
+                    <i class="fa-solid fa-star"></i>
+                    <span>5.0</span>
+                  </p>
+                </div>
+                <p>3,756 KM away</p>
+                <p>11-14 may Apr</p>
+                <p><b>₹6,780</b> night</p>
+              </div>
+            </div>
+            <div class="productCard">
+              <div class="cardBackGroundImg3">
+                <div class="imgOver">
+                  <p>Guest Favourite</p>
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>
+              <div class="cardText">
+                <div class="cardTextTitleSection">
+                  <p>Manali</p>
+                  <p>
+                    <i class="fa-solid fa-star"></i>
+                    <span>5.0</span>
+                  </p>
+                </div>
+                <p>3,240 Km away</p>
+                <p>11-14 may</p>
+                <p><b>₹2,000</b> night</p>
+              </div>
+            </div>
+            <div class="productCard">
+              <div class="cardBackGroundImg4">
+                <div class="imgOver">
+                  <p>Guest Favourite</p>
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>
+              <div class="cardText">
+                <div class="cardTextTitleSection">
+                  <p>Silvasa</p>
+                  <p>
+                    <i class="fa-solid fa-star"></i>
+                    <span>5.0</span>
+                  </p>
+                </div>
+                <p>4,343 KM away</p>
+                <p>14-19 Apr</p>
+                <p><b>₹5,000</b> night</p>
+              </div>
+            </div>
+            <div class="productCard">
+              <div class="cardBackGroundImg5">
+                <div class="imgOver">
+                  <p>Guest Favourite</p>
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>
+              <div class="cardText">
+                <div class="cardTextTitleSection">
+                  <p>Washi, Mumbai</p>
+                  <p>
+                    <i class="fa-solid fa-star"></i>
+                    <span>5.0</span>
+                  </p>
+                </div>
+                <p>4,343 KM away</p>
+                <p>14-19 Apr</p>
+                <p><b>₹5,000</b> night</p>
+              </div>
+            </div>
+            <div class="productCard">
+              <div class="cardBackGroundImg6">
+                <div class="imgOver">
+                  <p>Guest Favourite</p>
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>
+              <div class="cardText">
+                <div class="cardTextTitleSection">
+                  <p>Washi, Mumbai</p>
+                  <p>
+                    <i class="fa-solid fa-star"></i>
+                    <span>5.0</span>
+                  </p>
+                </div>
+                <p>4,343 KM away</p>
+                <p>14-19 Apr</p>
+                <p><b>₹5,000</b> night</p>
+              </div>
+            </div>
+            <div class="productCard">
+              <div class="cardBackGroundImg7">
+                <div class="imgOver">
+                  <p>Guest Favourite</p>
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>
+              <div class="cardText">
+                <div class="cardTextTitleSection">
+                  <p>Washi, Mumbai</p>
+                  <p>
+                    <i class="fa-solid fa-star"></i>
+                    <span>5.0</span>
+                  </p>
+                </div>
+                <p>4,343 KM away</p>
+                <p>14-19 Apr</p>
+                <p><b>₹5,000</b> night</p>
+              </div>
+            </div>
+            <div class="productCard">
+              <div class="cardBackGroundImg8">
+                <div class="imgOver">
+                  <p>Guest Favourite</p>
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>
+              <div class="cardText">
+                <div class="cardTextTitleSection">
+                  <p>Washi, Mumbai</p>
+                  <p>
+                    <i class="fa-solid fa-star"></i>
+                    <span>5.0</span>
+                  </p>
+                </div>
+                <p>4,343 KM away</p>
+                <p>14-19 Apr</p>
+                <p><b>₹5,000</b> night</p>
+              </div>
+            </div>
+            <div class="productCard">
+              <div class="cardBackGroundImg9">
+                <div class="imgOver">
+                  <p>Guest Favourite</p>
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>
+              <div class="cardText">
+                <div class="cardTextTitleSection">
+                  <p>Washi, Mumbai</p>
+                  <p>
+                    <i class="fa-solid fa-star"></i>
+                    <span>5.0</span>
+                  </p>
+                </div>
+                <p>4,343 KM away</p>
+                <p>14-19 Apr</p>
+                <p><b>₹5,000</b> night</p>
+              </div>
+            </div>
+            <div class="productCard">
+              <div class="cardBackGroundImg10">
+                <div class="imgOver">
+                  <p>Guest Favourite</p>
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>
+              <div class="cardText">
+                <div class="cardTextTitleSection">
+                  <p>Washi, Mumbai</p>
+                  <p>
+                    <i class="fa-solid fa-star"></i>
+                    <span>5.0</span>
+                  </p>
+                </div>
+                <p>4,343 KM away</p>
+                <p>14-19 Apr</p>
+                <p><b>₹5,000</b> night</p>
+              </div>
+            </div>
+            <div class="productCard">
+              <div class="cardBackGroundImg11">
+                <div class="imgOver">
+                  <p>Guest Favourite</p>
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>
+              <div class="cardText">
+                <div class="cardTextTitleSection">
+                  <p>Washi, Mumbai</p>
+                  <p>
+                    <i class="fa-solid fa-star"></i>
+                    <span>5.0</span>
+                  </p>
+                </div>
+                <p>4,343 KM away</p>
+                <p>14-19 Apr</p>
+                <p><b>₹5,000</b> night</p>
+              </div>
+            </div>
+            <div class="productCard">
+              <div class="cardBackGroundImg12">
+                <div class="imgOver">
+                  <p>Guest Favourite</p>
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>
+              <div class="cardText">
+                <div class="cardTextTitleSection">
+                  <p>Washi, Mumbai</p>
+                  <p>
+                    <i class="fa-solid fa-star"></i>
+                    <span>5.0</span>
+                  </p>
+                </div>
+                <p>4,343 KM away</p>
+                <p>14-19 Apr</p>
+                <p><b>₹5,000</b> night</p>
+              </div>
+            </div>
+            <div class="productCard">
+              <div class="cardBackGroundImg13">
+                <div class="imgOver">
+                  <p>Guest Favourite</p>
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>
+              <div class="cardText">
+                <div class="cardTextTitleSection">
+                  <p>Washi, Mumbai</p>
+                  <p>
+                    <i class="fa-solid fa-star"></i>
+                    <span>5.0</span>
+                  </p>
+                </div>
+                <p>4,343 KM away</p>
+                <p>14-19 Apr</p>
+                <p><b>₹5,000</b> night</p>
+              </div>
+            </div>
+            <div class="productCard">
+              <div class="cardBackGroundImg14">
+                <div class="imgOver">
+                  <p>Guest Favourite</p>
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>
+              <div class="cardText">
+                <div class="cardTextTitleSection">
+                  <p>Washi, Mumbai</p>
+                  <p>
+                    <i class="fa-solid fa-star"></i>
+                    <span>5.0</span>
+                  </p>
+                </div>
+                <p>4,343 KM away</p>
+                <p>14-19 Apr</p>
+                <p><b>₹5,000</b> night</p>
+              </div>
+            </div>
+            <div class="productCard">
+              <div class="cardBackGroundImg15">
+                <div class="imgOver">
+                  <p>Guest Favourite</p>
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>
+              <div class="cardText">
+                <div class="cardTextTitleSection">
+                  <p>Washi, Mumbai</p>
+                  <p>
+                    <i class="fa-solid fa-star"></i>
+                    <span>5.0</span>
+                  </p>
+                </div>
+                <p>4,343 KM away</p>
+                <p>14-19 Apr</p>
+                <p><b>₹5,000</b> night</p>
+              </div>
+            </div>
+<!-------End of Image Section-->
+          </div>
+        </div> 
+    </div>
+</body>
+</html>
